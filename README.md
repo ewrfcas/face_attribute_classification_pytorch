@@ -28,4 +28,4 @@ Coming soon
 
 1. Download img_celeba_aligned dataset
 
-2. python train.py --input_path {img_celeba_aligned_path}
+2. python train.py -input_path {img_celeba_aligned_path}
