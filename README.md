@@ -22,10 +22,10 @@ baiduyun: https://pan.baidu.com/s/18HLplvoyhp1RntQXiR84rA password:4zk4
 
 ## Test
 
-Coming soon
+1. python test.py --img_path {target_image_path}
 
 ## Train
 
 1. Download img_celeba_aligned dataset
 
-2. python train.py -input_path {img_celeba_aligned_path}
+2. python train.py --input_path {img_celeba_aligned_path}
