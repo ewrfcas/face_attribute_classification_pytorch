@@ -19,7 +19,10 @@ class AttClsModel(nn.Module):
         else:
             raise NotImplementedError
         self.lambdas = torch.ones((40,), device=device)
-        self.k = opt.k
+        if hasattr(opt, 'k'):
+            self.k = opt.k
+        else:
+            self.k = -1
         self.val_loss = []  # max_len == 2*k
         self.fc = nn.Linear(hidden_size, 40)
 

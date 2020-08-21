@@ -18,7 +18,7 @@ The official caffe code is https://github.com/qiexing/adaptive_weighted_attribut
 
 ## Download trained model
 
-Coming soon
+baiduyun: https://pan.baidu.com/s/18HLplvoyhp1RntQXiR84rA password:4zk4
 
 ## Test
 
