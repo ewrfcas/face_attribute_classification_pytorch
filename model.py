@@ -25,6 +25,7 @@ class AttClsModel(nn.Module):
             self.k = -1
         self.val_loss = []  # max_len == 2*k
         self.fc = nn.Linear(hidden_size, 40)
+        self.dropout = nn.Dropout(0.5)
 
     def backbone_forward(self, x):
         x = self.backbone.conv1(x)
@@ -44,7 +45,7 @@ class AttClsModel(nn.Module):
     def forward(self, input, labels=None):
         x = self.backbone_forward(input)
         x = torch.flatten(x, 1)
-        x = nn.Dropout(0.5)(x)
+        x = self.dropout(x)
         x = self.fc(x)
 
         if labels is None:
